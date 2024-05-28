@@ -5,17 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacking ${sukoharjo-jamu-atcs-cctv}</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
-    <header>
 
+    <div class="log">
+        <span class="material-symbols-outlined" style="color: white; ">close open_in_full remove</span>
+            <div>
+            <p id="p1" style="display: none;">preparing hyper-v-console.node</p><br>
+            <p id="p2" style="display: none;">connecting to cctv-dishub.sukoharjokab.go.id</p><br>
+            <p id="p3" style="display: none;">parsing $skhj-patung-jamu-atcs</p><br>
+            <p id="p4" style="display: none;">encrypting the connection</p><br>
+            <p id="p5" style="display: none;">CONNECTED!</p>
+        </div>
+    </div>
+
+    <header>
     </header>
     
     <main>
         <div>
-            <p>terminal 1 : $sukoharjo-atc-jamu</p>
-            <img src="https://cctv-dishub.sukoharjokab.go.id/zm/cgi-bin/nph-zms?mode=jpeg&monitor=13&user=user&pass=user" alt="">
+                <span class="material-symbols-outlined" style="color: white; ">close open_in_full remove</span>
+                <p>terminal$admin : $sukoharjo-atc-jamu</p>
+            <img id="atcs" src="https://cctv-dishub.sukoharjokab.go.id/zm/cgi-bin/nph-zms?mode=jpeg&monitor=13&user=user&pass=user" alt="">
         </div>
     </main>
 </body>
+<script>
+    function showText () {
+        document.getElementById("p1").style.display = "inline"
+    }
+    function showText2 () {
+        document.getElementById("p2").style.display = "inline"
+    }
+    function showText3 () {
+        document.getElementById("p3").style.display = "inline"
+    }
+    function showText4 () {
+        document.getElementById("p4").style.display = "inline"
+    }
+
+    function connected () {
+        document.getElementById("p5").style.display = "inline"
+    }
+    setTimeout("showText()", 200);
+    setTimeout("showText2()", 1200);
+    setTimeout("showText3()", 2400);
+    setTimeout("showText4()", 3000);
+    setTimeout("connected()", 3200)
+
+
+
+    // img
+    function showAtcs () {
+        document.getElementById("atcs").style.display = "inline"
+    }
+    setTimeout("showAtcs()", 3500);
+    </script>
 </html>
