@@ -8,6 +8,18 @@ header {
     display: flex;
 }
 
+.log {
+    border: 10px solid #20C20E;
+    background-color: #20C20E;
+    position: fixed;
+    width: 20rem;
+    flex-direction: row;
+}
+
+p {
+    color: white;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -27,4 +39,5 @@ main div p{
 }
 main div img {
     width: 60rem;
+    display: none;
 }
